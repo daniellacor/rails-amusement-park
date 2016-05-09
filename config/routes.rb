@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   root 'users#index'
   get '/', to: 'users#index'
 
-  get 'sign-in', to: "sessions#new"
-  post 'sign-in', to: "sessions#create"
+  get 'signin', to: "sessions#new"
+  post 'signin', to: "sessions#create"
 
 end
