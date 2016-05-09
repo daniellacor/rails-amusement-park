@@ -9,6 +9,7 @@ class UsersController < ApplicationController
   end
 
   def create
+    binding.pry
     @user = User.create(user_params)
     redirect_to user_path(@user)
   end
@@ -20,7 +21,7 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:name, :nausea, :happiness, :tickets, :height)
+    params.require(:user).permit(:name, :nausea, :happiness, :tickets, :height, :admin)
   end
 
 end

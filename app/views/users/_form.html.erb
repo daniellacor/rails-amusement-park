@@ -11,6 +11,7 @@
   <%= f.text_field :nausea %><br>
   <%= f.label :tickets, "How many tickets do you have?" %>
   <%= f.text_field :tickets %><br>
-
+  <%= f.label :admin, "Check here if you are an owner" %>
+  <%= f.check_box :admin %> <br>
   <%= f.submit %>
 <% end %>
