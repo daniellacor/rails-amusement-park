@@ -14,9 +14,9 @@ Rails.application.routes.draw do
   resources :attractions
 
   root 'users#index'
+  get '/', to: 'users#index'
 
   get 'sign-in', to: "sessions#new"
   post 'sign-in', to: "sessions#create"
 
-  get 'register', to: 'users#new', as: 'register'
 end
