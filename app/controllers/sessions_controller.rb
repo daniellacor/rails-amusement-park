@@ -9,8 +9,8 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    @user = User.find(params[:user][:id])
-    @user.session.user_id.destroy
-    redirect_to users_path
+    @user = User.find(session[:user_id])
+    session.delete :user_id
+    redirect_to '/'
   end
 end
