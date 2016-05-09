@@ -25,7 +25,7 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find(params[:id])
-    @user.rides.create(attraction_id: attraction_id)
+    @new_ride = @user.rides.create(attraction_id: attraction_id)
     redirect_to user_path(@user)
   end
 
