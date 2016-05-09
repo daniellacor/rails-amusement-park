@@ -18,6 +18,7 @@ class AttractionsController < ApplicationController
 
   def edit
     @attraction = Attraction.find(params[:id])
+    @user = User.find(session[:user_id])
   end
 
   private
