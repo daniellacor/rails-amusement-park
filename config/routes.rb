@@ -5,7 +5,6 @@ Rails.application.routes.draw do
   get 'sessions/create'
 
   namespace :admin do
-    resources :users
     resources :attractions
   end
 
