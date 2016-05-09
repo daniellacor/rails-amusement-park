@@ -11,8 +11,8 @@ module AttractionsHelper
     if user.admin
       link_to "Show #{attraction.name}", attraction_path(attraction)
     else
-      button_to "Go on #{attraction.name}", attraction_path(attraction), method: :get
-    end 
+      button_to "Go on #{attraction.name}", attraction_path(attraction)
+    end
   end
 
   def admin_edit_attraction
