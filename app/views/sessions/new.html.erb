@@ -1,2 +1,6 @@
-<h1>Sessions#new</h1>
-<p>Find me in app/views/sessions/new.html.erb</p>
+<h1>Log In Here</h1>
+
+<%= form_tag '/sign-in' do |f| %>
+  <%= text_field_tag :name, nil, placeholder: "Enter your login" %>
+  <%= submit_tag "Sign In" %>
+<% end %>
