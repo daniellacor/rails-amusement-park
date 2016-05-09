@@ -22,7 +22,7 @@ module AttractionsHelper
     else
       form_for @user do |f|
         hidden_field_tag('attraction_id', @attraction.id)
-        f.submit "Go on #{@attraction.name}"
+        f.submit "Go on this ride"
       end
     end
   end
