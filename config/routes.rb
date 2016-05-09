@@ -10,4 +10,7 @@ Rails.application.routes.draw do
 
   root 'users#index'
 
+  get 'sign-in', to: "sessions#new"
+  post 'sign-in', to: "sessions#create"
+
 end
