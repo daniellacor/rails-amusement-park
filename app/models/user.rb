@@ -5,18 +5,10 @@ class User < ActiveRecord::Base
 
   def mood
     if self.happiness.to_i > self.nausea.to_i
-      "Happy"
+      "happy"
     else
-      "Sad"
+      "sad"
     end
-  end
-
-  def take_ride
-    @user = User.find(params[:id])
-    user.tickets -= ride.tickets
-    user.nausea -= ride.nausea_rating
-    new_happiness -= user.happiness - ride.happiness_rating
-
   end
 
 
