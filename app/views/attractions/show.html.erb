@@ -8,8 +8,7 @@
 
 <% if @user.admin == false %>
 <%= form_for @user do |f| %>
-        <%= f.text_field :name %>
 <input type="hidden" name="attraction_id" value="<%= params[:id] %>" >
        <%= f.submit "Go on this ride" %>
-       <% end %>
-       <% end %>
+  <% end %>
+<% end %>
